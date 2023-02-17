@@ -23,10 +23,6 @@
             height: 320;
         }
 
-        button {
-            width: 45%;
-            height: 200px;
-        }
         #izq {
         background-color: #008CBA; /* Color de fondo */
         color: white; /* Color del texto */
@@ -40,6 +36,8 @@
         margin: 4px 2px; /* Margen: arriba/abajo izquierda/derecha */
         cursor: pointer; /* Cursor tipo mano */
         transition-duration: 0.4s; /* Duración de la transición */
+        width: 45%;
+        height: 200px;
       }
 
       /* Estilo para el botón de mover a la derecha */
@@ -56,6 +54,8 @@
         margin: 4px 2px; /* Margen: arriba/abajo izquierda/derecha */
         cursor: pointer; /* Cursor tipo mano */
         transition-duration: 0.4s; /* Duración de la transición */
+        width: 45%;
+        height: 200px;
       }
 
       /* Estilo al pasar el ratón por encima del botón */
@@ -149,6 +149,10 @@
         leftButton.addEventListener('mouseup', leftButtonUp);
         rightButton.addEventListener('mousedown', rightButtonDown);
         rightButton.addEventListener('mouseup', rightButtonUp);
+        leftButton.addEventListener('touchstart', leftButtonDown);
+        leftButton.addEventListener('touchend', leftButtonUp);
+        rightButton.addEventListener('touchstart', rightButtonDown);
+        rightButton.addEventListener('touchend', rightButtonUp);
 
         //Agregar event listeners para detectar cuando se presiona o se suelta una tecla
         document.addEventListener("keydown", keyDownHandler, false);
