@@ -285,8 +285,8 @@
                             dy = -dy;
                             b.status = 0;
                             numBricks--;
-                            //drawBricks();
-                            if (numBricks==0) {
+                            colorBloques = generarColorHexadecimal(); // Cada vez que haya un choque los bloques cambian de color
+                            if (numBricks==0) { 
                                 alert("You Win!");
                                 document.location.reload();
                                 clearInterval(intervalId); // Detener el juego
