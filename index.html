@@ -157,7 +157,7 @@
         }
 
         let colorBloques = generarColorHexadecimal();
-
+        let colorBola = generarColorHexadecimal();
 
 
 
@@ -200,7 +200,7 @@
         function drawBall() {
             ctx.beginPath();
             ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-            ctx.fillStyle = "#0095DD";
+            ctx.fillStyle = colorBola;
             ctx.fill();
             ctx.closePath();
         }
@@ -245,6 +245,7 @@
             } else if (y + dy > canvas.height - ballRadius - paddleHeight) {
                 if (x > paddleX && x < paddleX + paddleWidth) {
                     // La bola golpeó la paleta
+                    colorBola = generarColorHexadecimal();
                     dy = -dy;
                     dx = 8 * ((x - (paddleX + paddleWidth / 2)) / paddleWidth);
                 } else {
