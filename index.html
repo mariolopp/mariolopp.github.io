@@ -91,6 +91,7 @@
         const brickOffsetLeft = 30;
         let numBricks=0;
         let bricks = [];
+        let points = 0;
 
         for (let c = 0; c < brickColumnCount; c++) {
             bricks[c] = [];
@@ -287,6 +288,7 @@
                             b.status = 0;
                             numBricks--;
                             colorBloques = generarColorHexadecimal(); // Cada vez que haya un choque los bloques cambian de color
+                            points++; 
                             if (numBricks==0) { 
                                 alert("You Win!");
                                 document.location.reload();
